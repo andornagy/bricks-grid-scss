@@ -1,20 +1,14 @@
-const { src, dest, series, watch } = require('gulp');
+const { src, dest, watch, series } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 
-// Styles
-const scss = require('gulp-sass')(require('sass'));
-const autoPrefixer = require('gulp-autoprefixer');
-const clean = require('gulp-clean');
+$scssSRC = 'src/**/*.scss';
 
-function styles() {
-   return src('./src/scss/**/*.scss')
-      .pipe(scss())
-      .pipe(autoPrefixer('last 2 versions'))
-      .pipe(clean({ force: true }))
-      .pipe(dest('./dist/css/'));
+function buildStyles() {
+   return src($scssSRC).pipe(sass()).pipe(dest('dest'));
 }
 
 function watchTask() {
-   watch(['./src/scss/**/*.scss'], series(styles));
+   watch([$scssSRC], buildStyles);
 }
 
-exports.default = series(styles, watchTask);
+exports.default = series(buildStyles, watchTask);
