@@ -3,7 +3,7 @@ const { src, dest, series, watch } = require('gulp');
 // Styles
 const scss = require('gulp-sass')(require('sass'));
 const autoPrefixer = require('gulp-autoprefixer');
-var clean = require('gulp-clean');
+const clean = require('gulp-clean');
 
 function styles() {
    return src('./src/scss/**/*.scss')

@@ -1,3 +1,85 @@
-body {
-   background-color: $base-color;
+.b-grid {
+   display: grid;
+   grid-template-columns: repeat($grid-columns, 1fr);
+   gap: $grid-gutter;
+}
+
+.l- {
+   &12 {
+      grid-column: span 12;
+   }
+   &11 {
+      grid-column: span 11;
+   }
+   &10 {
+      grid-column: span 10;
+   }
+   &9 {
+      grid-column: span 9;
+   }
+   &8 {
+      grid-column: span 8;
+   }
+   &7 {
+      grid-column: span 7;
+   }
+   &6 {
+      grid-column: span 6;
+   }
+   &5 {
+      grid-column: span 5;
+   }
+   &4 {
+      grid-column: span 4;
+   }
+   &3 {
+      grid-column: span 3;
+   }
+   &2 {
+      grid-column: span 2;
+   }
+   &1 {
+      grid-column: span 1;
+   }
+}
+
+.m- {
+   @include mq("medium up") {
+      &12 {
+         grid-column: span 12;
+      }
+      &11 {
+         grid-column: span 11;
+      }
+      &10 {
+         grid-column: span 10;
+      }
+      &9 {
+         grid-column: span 9;
+      }
+      &8 {
+         grid-column: span 8;
+      }
+      &7 {
+         grid-column: span 7;
+      }
+      &6 {
+         grid-column: span 6;
+      }
+      &5 {
+         grid-column: span 5;
+      }
+      &4 {
+         grid-column: span 4;
+      }
+      &3 {
+         grid-column: span 3;
+      }
+      &2 {
+         grid-column: span 2;
+      }
+      &1 {
+         grid-column: span 1;
+      }
+   }
 }
