@@ -1,64 +1,62 @@
 @use "sass:math";
 
+$values: (
+   "0": 0,
+   "1": $base-padding,
+   "2": $base-padding * 2,
+   "3": $base-padding * 4,
+   "4": $base-padding * 6,
+   "5": $base-padding * 8,
+);
+
 $utilities: (
    "padding": (
       "prefix": "p",
-      "values": (
-         "0": 0,
-         "1": $base-padding,
-         "2": $base-padding * 2,
-         "3": $base-padding * 4,
-         "4": $base-padding * 6,
-         "5": $base-padding * 8,
-      ),
+      "values": $values,
    ),
 
    "padding-left": (
       "prefix": "pl",
-      "values": (
-         "0": 0,
-         "1": $base-padding,
-         "2": $base-padding * 2,
-         "3": $base-padding * 4,
-         "4": $base-padding * 6,
-         "5": $base-padding * 8,
-      ),
+      "values": $values,
    ),
 
    "padding-right": (
       "prefix": "pr",
-      "values": (
-         "0": 0,
-         "1": $base-padding,
-         "2": $base-padding * 2,
-         "3": $base-padding * 4,
-         "4": $base-padding * 6,
-         "5": $base-padding * 8,
-      ),
+      "values": $values,
    ),
 
    "padding-top": (
       "prefix": "pt",
-      "values": (
-         "0": 0,
-         "1": $base-padding,
-         "2": $base-padding * 2,
-         "3": $base-padding * 4,
-         "4": $base-padding * 6,
-         "5": $base-padding * 8,
-      ),
+      "values": $values,
    ),
 
    "padding-bottom": (
       "prefix": "pb",
-      "values": (
-         "0": 0,
-         "1": $base-padding,
-         "2": $base-padding * 2,
-         "3": $base-padding * 4,
-         "4": $base-padding * 6,
-         "5": $base-padding * 8,
-      ),
+      "values": $values,
+   ),
+   "margin": (
+      "prefix": "m",
+      "values": $values,
+   ),
+
+   "margin-left": (
+      "prefix": "ml",
+      "values": $values,
+   ),
+
+   "margin-right": (
+      "prefix": "mr",
+      "values": $values,
+   ),
+
+   "margin-top": (
+      "prefix": "mt",
+      "values": $values,
+   ),
+
+   "margin-bottom": (
+      "prefix": "mb",
+      "values": $values,
    ),
 );
 
