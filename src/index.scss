@@ -1,16 +1,20 @@
 // variables & funcitons
-@import "variables";
-@import "functions";
+@import "variables", "functions";
 
 // base & layout
-@import "base";
+@import "base", "breakpoints", "grid";
 
 // colors
 @import "colors";
 
 // components (buttons, card, navbar)
-@import "components/card";
-@import "components/button";
+@import "components/card", "components/button";
 
 // utilities (margin, padding, opacity)
 @import "utilities";
+
+.test {
+   @include breakpoint(600px) {
+      display: block;
+   }
+}
