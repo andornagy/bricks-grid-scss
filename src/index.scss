@@ -8,13 +8,7 @@
 @import "colors";
 
 // components (buttons, card, navbar)
-@import "components/card", "components/button";
+@import "components/card", "components/button", "components/navbar", "components/badge";
 
 // utilities (margin, padding, opacity)
 @import "utilities";
-
-.test {
-   @include breakpoint(600px) {
-      display: block;
-   }
-}

@@ -9,6 +9,22 @@ $values: (
    "5": $base-padding * 8,
 );
 
+// Horizontal / vertical padding classes
+@each $key, $val in $values {
+   .ph-#{$key} {
+      padding: $val 0;
+   }
+   .pv-#{$key} {
+      padding: 0 $val;
+   }
+   .mh-#{$key} {
+      padding: $val 0;
+   }
+   .mv-#{$key} {
+      padding: 0 $val;
+   }
+}
+
 $utilities: (
    "padding": (
       "prefix": "p",
