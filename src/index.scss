@@ -2,13 +2,13 @@
 @import "variables", "functions";
 
 // base & layout
-@import "base", "breakpoints", "grid";
+@import "base", "breakpoints", "flex-grid", "grid";
 
 // colors
 @import "colors";
 
 // components (buttons, card, navbar)
-@import "components/card", "components/button", "components/navbar", "components/badge";
+@import "components/card", "components/button", "components/navbar", "components/badge", "components/forms";
 
 // utilities (margin, padding, opacity)
 @import "utilities";

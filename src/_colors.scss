@@ -1,5 +1,8 @@
 @use "sass:math";
 
+// number of color variants
+$color-variants: 9;
+
 @each $key, $val in $colors {
    .text-#{$key} {
       color: $val;
@@ -15,7 +18,7 @@
 
    @if ($val != black and $val != white) {
       // light variations
-      @for $i from 1 through 9 {
+      @for $i from 1 through $color-variants {
          .text-#{$key}-light-#{$i} {
             color: lighten($val, $i * 10);
          }
@@ -30,7 +33,7 @@
       }
 
       // dark variations
-      @for $i from 1 through 9 {
+      @for $i from 1 through $color-variants {
          .text-#{$key}-dark-#{$i} {
             color: darken($val, $i * 10);
          }
