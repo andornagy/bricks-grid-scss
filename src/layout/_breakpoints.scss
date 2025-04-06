@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "variables" as *;
+@use "config" as *;
+
+@mixin breakpoint($breakpoint) {
+	@if (map-get($breakpoints, $breakpoint)) {
+		@media (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	} @else {
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	}
+}

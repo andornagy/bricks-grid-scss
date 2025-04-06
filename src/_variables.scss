@@ -1,40 +1,97 @@
-// Theme colors
-$primary: #326dee !default;
-$secondary: #1ac888 !default;
-$error: #d32752 !default;
-$info: #f6c31c !default;
+@use "sass:map";
+@use "config" as *;
 
-// color palette
 $colors: (
-   "primary": $primary,
-   "secondary": $secondary,
-   "error": $error,
-   "info": $info,
-   "blue": #1919e6,
-   "red": #e61919,
-   "yellow": #e6e619,
-   "green": #19e635,
-   "orange": #ffa600,
-   "purple": #9900ff,
-   "gray": #808080,
-   "black": black,
-   "white": white,
+	"primary": #326dee,
+	"secondary": #1ac888,
+	"error": #d32752,
+	"info": #f6c31c,
+	"blue": #1919e6,
+	"red": #e61919,
+	"yellow": #e6e619,
+	"green": #19e635,
+	"orange": #ffa600,
+	"purple": #9900ff,
+	"gray": #808080,
+	"black": black,
+	"white": white,
+) !default;
+
+// colors
+$color-primary: map-get(
+	$map: $colors,
+	$key: primary,
+);
+$color-secondary: map-get(
+	$map: $colors,
+	$key: secondary,
+);
+$color-success: map-get(
+	$map: $colors,
+	$key: success,
+);
+$color-info: map-get(
+	$map: $colors,
+	$key: info,
+);
+$color-warning: map-get(
+	$map: $colors,
+	$key: warning,
+);
+$color-danger: map-get(
+	$map: $colors,
+	$key: danger,
+);
+$color-light: map-get(
+	$map: $colors,
+	$key: light,
+);
+$color-dark: map-get(
+	$map: $colors,
+	$key: dark,
+);
+$color-white: map-get(
+	$map: $colors,
+	$key: white,
+);
+$color-black: map-get(
+	$map: $colors,
+	$key: black,
 );
 
+$text-color-classes: false !default;
+$bg-color-classes: true !default;
+
 // spacing
-$base-padding: 0.75rem;
-$base-margin: 0.75rem;
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
 
 // borders
-$base-border-thickness: 1px;
-$base-border-radius: 20px;
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
 
 // box-shadow
-$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
 
 // font-sizes
-$base-font-size: 1rem;
-$font-size-sm: $base-font-size * 0.75;
-$font-size-lg: $base-font-size * 1.5;
-$font-size-xl: $base-font-size * 2;
-$font-size-xxl: $base-font-size * 3;
+$base-font-size: 1rem !default;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;
+
+// font-families
+$base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+	Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !default; // Consider making this a variable
+$font-family-mono: "Courier New", Courier, monospace !default;
+
+$breakpoints: (
+	"xs": 0,
+	"sm": 480px,
+	"md": 720px,
+	"lg": 960px,
+	"xl": 1200px,
+) !default;
+
+$grid-columns: 12 !default;
+$sizes: "xs", "sm", "md", "lg", "xl", "xxl" !default;

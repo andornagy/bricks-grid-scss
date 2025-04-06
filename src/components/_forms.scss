@@ -1,14 +1,18 @@
+@use "sass:color";
+@use "variables" as *;
+@use "config" as *;
+
 %input {
-   padding: 0.5rem;
-   border-radius: 4px;
-   border: solid $base-border-thickness #808080;
-   box-shadow: $base-box-shadow;
+	padding: 0.5rem;
+	border-radius: 4px;
+	border: solid $base-border-thickness #808080;
+	box-shadow: $base-box-shadow;
 }
 
 .form-group {
-   .input {
-      &-text {
-         @extend %input;
-      }
-   }
+	.input {
+		&-text {
+			@extend %input;
+		}
+	}
 }

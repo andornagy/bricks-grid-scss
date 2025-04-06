@@ -1,14 +1,27 @@
+// reset
+@use "reset";
+
+// config
+@use "config";
+
 // variables & funcitons
-@import "variables", "functions";
+@use "variables";
+@use "functions";
 
 // base & layout
-@import "base", "breakpoints", "flex-grid", "grid";
+@use "layout/breakpoints";
+@use "layout/flex-grid";
+@use "layout/grid";
 
 // colors
-@import "colors";
+@use "colors";
+
+// typography
+@use "typography";
 
 // components (buttons, card, navbar)
-@import "components/card", "components/button", "components/navbar", "components/badge", "components/forms";
+@use "components/button";
+@use "components/forms";
 
-// utilities (margin, padding, opacity)
-@import "utilities";
+// utilities (margin,padding, opacity)
+@use "utilities";

@@ -1,39 +1,55 @@
+@use "sass:color";
+@use "variables" as *;
+@use "config" as *;
+
 @mixin btn($bg-color: #e2e2e2) {
-   text-decoration: none;
-   cursor: pointer;
-   display: inline-block;
-   border: 0;
-   padding: $base-padding $base-padding * 2;
-   border-radius: $base-border-radius;
-   background-color: $bg-color;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	border: 0;
+	padding: $base-padding $base-padding * 2;
+	background-color: $bg-color;
+
+	font-weight: 400; // Adjust as needed
+	line-height: 1.5; // Standard line height
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid transparent; // Base border
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn {
-   @include btn;
+	@include btn;
 }
 
 @each $key, $val in $colors {
-   .btn-#{$key} {
-      @include btn($val);
-      &:hover {
-         background-color: lighten($val, 5);
-      }
-   }
+	.btn-#{$key} {
+		@include btn($val);
+		background-color: $val;
+		&:hover {
+			background-color: color.adjust($val, $lightness: 2);
+		}
+	}
 
-   .btn-outlined-#{$key} {
-      @include btn(#fff);
-      border: $base-border-thickness solid $val;
-      &:hover {
-         background-color: $val;
-      }
-   }
+	.btn-outlined-#{$key} {
+		@include btn(#fff);
+		border: $base-border-thickness solid $val;
+		&:hover {
+			background-color: $val;
+		}
+	}
 
-   .btn-complement-#{$key} {
-      @include btn($val);
-      color: light-comp($val);
-      &:hover {
-         color: $val;
-         background-color: light-comp($val);
-      }
-   }
+	.btn-complement-#{$key} {
+		@include btn($val);
+		color: light-comp($val);
+		&:hover {
+			color: $val;
+			background-color: light-comp($val);
+		}
+	}
 }

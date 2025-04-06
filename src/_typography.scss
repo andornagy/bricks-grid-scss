@@ -1,0 +1,6 @@
+@use "variables" as *;
+@use "config" as *;
+
+html {
+	font-family: $base-font-family;
+}
